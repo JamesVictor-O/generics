@@ -8,9 +8,10 @@ struct Points<T>{
     y:T
 }
 
-enum Option<T>{
-    Some(T),
-    None
+struct Person<T>{
+    name:T,
+    age:T,
+    work:T
 }
 
 #[derive(Debug)]
@@ -18,6 +19,30 @@ enum Registerd<T>{
     Yes(T),
     No
 }
+
+impl<T>  Person<T> {
+     fn new(name:T, age:T, work:T) ->Self{
+        Self { name, age, work }
+     }
+
+     fn value_name(&self) -> &T{
+        &self.name
+     }
+}
+
+impl<T> Points<T> {
+    fn new(x:T, y:T) -> Points<T>{
+        Points{
+            x,
+            y
+        }
+    }
+
+    fn value_x(&self) -> &T{
+        &self.x
+    }
+}
+
 
 
 fn main() {
