@@ -1,3 +1,4 @@
+mod rust_trait;
 // generics in rust;
 //  gennerics allow you writte code that works for many types without sacrificing performances or safety.
 
@@ -43,6 +44,7 @@ impl<T> Points<T> {
     }
 }
 
+//  trait in rust are what interface are to solidity.
 
 
 fn main() {
@@ -60,10 +62,7 @@ fn main() {
 
    let is_registered= Registerd::Yes(String::from("2025-11-06"));
    let is_registered2=Registerd::Yes(32);
-   print_register(is_registered);
-   print_register(is_registered2);
-
-//    println!("{:?}", is_registered)
+     rust_trait::rust_trait();
 
 }
 
